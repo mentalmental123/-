@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <section class="header-section">
+        <!-- <div class="container"> -->
+        <nav class="navigation">
+          <div class="logo">
+            <a href="./index.html">Track<span class="black-logo">Imp</span></a>
+          </div>
+          <ul class="nav-flex-menu">
+            <li class="nav-flex-menu-item">
+              <a class="nav-page" href="./index.html">Info</a>
+            </li>
+
+            <li data-login="out" id="login-option" class="nav-flex-menu-item">
+              <a class="nav-page login-set" href="./login-page.html">Login</a>
+            </li>
+          </ul>
+        </nav>
+        <p class="role-label"></p>
+        <!-- </div> -->
+      </section>
+    </header>
+
+    <div class="mother-board">
+      <form class="login">
+        <input id="login" type="text" placeholder="Username" />
+        <input id="password" type="password" placeholder="Password" />
+        <button class="login-button">Login</button>
+      </form>
+
+      <div class="hide-elem main-content-container">
+        <div class="hide-elem exel-container">
+          <label for="exel-input">Завантажте заповнений файл</label>
+          <div class="exel-flex-container">
+            <input
+              id="exel-input"
+              class="exel-input"
+              type="file"
+              accept=".xls,.xlsx"
+            />
+            <a class="template" href="../template.xlsx" download>
+              Завантажте зразок файлу</a
+            >
+          </div>
+        </div>
+        <form class="pollution-form">
+          <a
+            class="template absolute"
+            href="https://snipboard.io/pQqklx.jpg"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Як користуватися формою</a
+          >
+          <h3 class="pollution-form-title">Форма для розрахунку шкоди</h3>
+          <div class="pollution-form-fields-container">
+            <label for="pollution-type">Екологічна ділянка</label>
+            <select
+              class="pollution-form-field"
+              name="pollution-type"
+              id="pollution-type"
+            >
+              <option value="">Оберіть природне середовище</option>
+              <option value="10">Вода</option>
+              <option value="5">Повітря</option>
+              <option value="1.5">Земля</option>
+            </select>
+          </div>
+          <div class="pollution-form-fields-container">
+            <label for="region-select">Область України</label>
+            <select
+              class="pollution-form-field"
+              name="region"
+              id="region-select"
+            >
+              <option value="">Оберіть область</option>
+              <option value="656">Автономна республіка Крим</option>
+              <option value="738">Вінницька область</option>
+              <option value="483">Волинська область</option>
+              <option value="748">Дніпропетровська область</option>
+              <option value="837">Донецька область</option>
+              <option value="538">Житомирська область</option>
+              <option value="518">Закарпатська область</option>
+              <option value="685">Запорізька область</option>
+              <option value="577">Івано-Франківська область</option>
+              <option value="704">Київська область</option>
+              <option value="883">Кіровоградська область</option>
+              <option value="639">Луганська область</option>
+              <option value="482">Львівська область</option>
+              <option value="737">Миколаївська область</option>
+              <option value="855">Одеська область</option>
+              <option value="794">Полтавська область</option>
+              <option value="521">Рівненська область</option>
+              <option value="737">Сумська область</option>
+              <option value="523">Тернопільська область</option>
+              <option value="717">Харківська область</option>
+              <option value="889">Херсонська область</option>
+              <option value="654">Хмельницька область</option>
+              <option value="499">Черкаська область</option>
+              <option value="467">Чернівецька область</option>
+              <option value="667">Чернігівська область</option>
+            </select>
+          </div>
+          <div class="pollution-form-fields-container">
+            <label for="pollution-area">Площа забруднення Кв.м</label>
+            <input
+              class="pollution-form-field"
+              id="pollution-area"
+              type="number"
+              name="pollution-area"
+            />
+          </div>
+          <div class="pollution-form-fields-container">
+            <label for="special-territories-select">Спеціальні території</label>
+            <select
+              class="pollution-form-field"
+              name="special-territories"
+              id="special-territories-select"
+            >
+              <option value="">Оберіть територію</option>
+              <option value="10">
+                Природні території та об’єкти природно-заповідного фонду
+              </option>
+              <option value="5">
+                Штучно створені об’єкти природно-заповідного фонду
+              </option>
+              <option value="3.5">
+                Охоронні зони навколо цінних природних об’єктів
+              </option>
+              <option value="4">
+                Охоронні зони навколо об’єктів культурної спадщини
+              </option>
+              <option value="2">
+                Охоронні зони навколо гідрометеорологічних станцій
+              </option>
+              <option value="2.5">
+                Особливо цінні землі сільськогосподарського призначення
+              </option>
+              <option value="4">
+                Округ санітарної (гірничо-санітарної) охорони у
+                лікувально-оздоровчих місцевостях і на території курортів
+              </option>
+              <option value="6">
+                Прибережні захисні смуги уздовж річок, навколо водойм та на
+                островах, заплави малих річок
+              </option>
+              <option value="5">
+                Прибережні захисні смуги уздовж морів, морських заток і лиманів
+                та на островах
+              </option>
+              <option value="6">
+                Пляжні зони уздовж морів, морських заток і лиманів
+              </option>
+              <option value="4">
+                Водоохоронні зони уздовж річок, морів, навколо озер, водосховищ
+                та інших водойм
+              </option>
+              <option value="2.5">
+                Охоронні зони наземних, надземних і підземних трубопроводів
+              </option>
+              <option value="1.5">
+                Охоронні зони уздовж повітряних і підземних кабельних ліній
+                зв’язку, а також навколо випромінювальних споруд
+                телерадіостанцій та радіорелейних ліній
+              </option>
+              <option value="1.5">
+                Охоронні зони уздовж повітряних і підземних кабельних ліній
+                електропередачі
+              </option>
+              <option value="1.5">
+                Захисні, охоронні та інші зони з особливими умовами користування
+                навколо військових та інших оборонних об’єктів
+              </option>
+              <option value="2">
+                Зони відчуження та безумовного (обов’язкового) відселення, що
+                зазнали радіоактивного забруднення внаслідок Чорнобильської
+                катастрофи
+              </option>
+              <option value="6">
+                Зона санітарної охорони навколо об’єктів, у яких є підземні та
+                відкриті джерела водопостачання, водозабірні та водоочисні
+                споруди, водоводи, об’єкти оздоровчого призначення
+              </option>
+              <option value="1.5">
+                Санітарно-захисні зони навколо об’єктів, які є джерелом
+                виділення шкідливих речовин, запахів, підвищеного рівня шуму,
+                вібрації, ультразвукових і електромагнітних хвиль, електронних
+                полів, іонізуючих випромінювань
+              </option>
+              <option value="3">
+                Прикордонна смуга уздовж державного кордону України
+              </option>
+              <option value="3">
+                Сільськогосподарські угіддя, включені в установленому порядку до
+                складу екомережі
+              </option>
+              <option value="4">Землі, зарезервовані для заповідання</option>
+              <option value="4">
+                Інші території з особливим режимом використання земель
+              </option>
+            </select>
+          </div>
+          <div class="pollution-form-fields-container">
+            <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+            <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+            <div class="hide-elem hide-formted-text">
+              <pre>
+<strong>Надзвичайно небезпечні речовини:</strong>
+
+Ртуть (Hg)
+Органічні ртутні сполуки
+Плутоній (Pu)
+Амонійна перхлорат
+Сарин (GB)
+Сірчана кислота (H2SO4)
+Фосген (CG)
+Арсенік (As)
+Ціаніди
+Радіоактивні ізотопи
+
+<strong>Дуже небезпечні речовини:</strong>
+
+Дихлорвінілбензол (DCB)
+Селян (HD)
+Нітрогліцерин
+Монооксид вуглецю (CO)
+Диоксини
+Хлор (Cl2)
+Фосфор (P)
+Мустангаз (HN3)
+Ацетонитрил
+Фосфорний трихлорид (PCl3)
+
+<strong>Помірно небезпечні речовини:</strong>
+
+Толуол
+Бензол
+Сірка діоксид (SO2)
+Амоніак (NH3)
+Формальдегід
+Бензпірен
+Оксиди азоту (NOx)
+Сірчані діоксиди (SOx)
+Хлористий водень (HCl)
+Фториди</pre>
+            </div>
+            <label for="danger-level-select">Забруднююча речовина</label>
+            <select
+              title=""
+              class="pollution-form-field"
+              name="danger-level"
+              id="danger-level-select"
+            >
+              <option value="">Наведіть для підсказки</option>
+              <option value="4">Надзвичайно небезпечні</option>
+              <option value="3">Дуже небезпечні</option>
+              <option value="2.5">Помірно небезпечні</option>
+              <option value="1.5">Інші</option>
+            </select>
+          </div>
+          <div class="pollution-form-fields-container">
+            <label for="date-field">Дата</label>
+            <input
+              type="date"
+              class="pollution-form-field"
+              name="date"
+              id="date-field"
+            />
+          </div>
+          <button
+            class="pollution-form-button"
+            type="submit"
+            id="calculate-button"
+          >
+            Розрахувати дані
+          </button>
+        </form>
+        <h3>Історія запитів</h3>
+
+        <div class="table-container">
+          <table id="pollutionTable" class="table">
+            <tr>
+              <th>Екологічна ділянка</th>
+              <th>Область України</th>
+              <th>Площа забруднення Кв.м</th>
+              <th>Спеціальні території</th>
+              <th>Забруднююча речовина</th>
+              <th>Дата</th>
+              <th>Розмір Шкоди(тис.грн)</th>
+            </tr>
+          </table>
+          <button class="delete-button export-data">export data</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/index.js"></script>
+
+    <script>
+      function deleteRow(index) {
+        try {
+          const evt = document.getElementsByClassName('delete-button')[index];
+          const id = evt.id;
+          if (id) {
+            let pollutionsLocal = localStorage.getItem('pollutions');
+            if (!pollutionsLocal) {
+              return console.log('ПОМИЛКА В localStorage - немає записів');
+            }
+            let smth = JSON.parse(pollutionsLocal);
+            console.log(smth);
+            let filtered = smth.filter(({ ID }) => ID !== id);
+            let result = confirm('Ви упевнені, що хочете видалити запис?');
+            if (result) {
+              localStorage.setItem('pollutions', JSON.stringify(filtered));
+              location.reload(true);
+              return;
+            }
+            return;
+          }
+          return console.error('ПОМИЛКА НЕ ПЕРЕДАЛИ АЙДІ ЗАПИСУ');
+        } catch (error) {
+          console.error('ПОМИЛКА у видаленні елемента', error);
+        }
+      }
+
+      const content = document.querySelector('.hide-formted-text');
+
+      tippy('#danger-level-select', {
+        content: content.innerHTML,
+        allowHTML: true,
+        maxWidth: 260,
+        placement: 'right-start',
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+* {
+  list-style: none;
+  text-decoration: none;
+  color: #fff9;
+}
+
+:root {
+  --primary-green: rgba(49, 78, 34, 0.972);
+  --button-hover: rgb(84, 128, 89);
+  --shadow-dark: rgba(0, 0, 0, 0.251);
+  --secondary-grey: rgba(142, 142, 142, 0.695);
+  --secondary-green: rgba(142, 173, 90, 0.56);
+}
+
+body {
+  background-color: var(--primary-green);
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 0 5px;
+}
+
+.material-symbols-outlined {
+  color: red;
+}
+
+.logo {
+  font-family: 'Aboreto', system-ui;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.flex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

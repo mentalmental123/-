@@ -1,0 +1,420 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #fff9;
+  box-sizing: border-box;
+}
+
+input {
+  color: black;
+}
+
+body {
+  background-color: var(--primary-green);
+  font-family: 'Asap', sans-serif;
+}
+
+:root {
+  --primary-green: rgba(49, 78, 34, 0.972);
+  --button-hover: rgb(84, 128, 89);
+  --shadow-dark: rgba(0, 0, 0, 0.251);
+  --secondary-grey: rgba(142, 142, 142, 0.695);
+  --secondary-green: rgba(142, 173, 90, 0.56);
+  --header-acent-gren: rgba(76, 114, 57, 0.972);
+  --hover-text-black: rgb(1, 0, 7);
+}
+
+body {
+  background-color: var(--primary-green);
+}
+
+.container {
+  height: 100%;
+  margin: 0 auto;
+  width: 80%;
+  padding: 0 5px;
+}
+
+.fornt-text {
+  font-size: 20px;
+}
+
+.material-symbols-outlined {
+  color: red;
+}
+
+.absolute {
+  font-size: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* header styles */
+
+.header-section {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Aboreto', system-ui;
+  line-height: 1.2;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  height: 20px;
+}
+
+.black-logo {
+  color: black;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: var(--header-acent-gren);
+  margin-bottom: 20px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
+.nav-flex-menu {
+  display: flex;
+  gap: 40px;
+  margin-left: 150px;
+}
+
+.nav-page {
+  cursor: pointer;
+  transition: color 250ms ease-in-out;
+}
+
+.nav-page:hover {
+  color: var(--hover-text-black);
+}
+/* login form settings */
+
+/* Colors */
+
+.go-back-button {
+  position: absolute;
+  top: 5%;
+  font-size: 20px;
+}
+
+.login {
+  overflow: hidden;
+  background-color: white;
+  padding: 40px 30px 30px 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  transition: transform 300ms, box-shadow 300ms;
+  box-shadow: 10px 15px 15px var(--shadow-dark);
+  color: black;
+}
+
+.login::before,
+.login::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+}
+
+.login::before {
+  left: 40%;
+  bottom: -130%;
+  background-color: var(--secondary-grey);
+  animation: wawes 6s infinite linear;
+}
+
+.login::after {
+  left: 35%;
+  bottom: -125%;
+  background-color: var(--secondary-green);
+  animation: wawes 7s infinite;
+}
+
+.login > input {
+  font-family: 'Asap', sans-serif;
+  display: block;
+  border-radius: 5px;
+  font-size: 16px;
+  background: white;
+  width: 100%;
+  border: 1px solid black;
+  padding: 10px 10px;
+  margin: 15px -10px;
+}
+
+.login > button {
+  font-family: 'Asap', sans-serif;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 80px;
+  border: 0;
+  padding: 10px 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  border-radius: 5px;
+  background-color: var(--primary-green);
+  transition: background-color 300ms;
+}
+
+.login > button:hover {
+  background-color: var(--button-hover);
+}
+
+@keyframes wawes {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* input button style */
+
+input[type='file'] {
+  width: 350px;
+  max-width: 100%;
+  color: #fff;
+  padding: 5px;
+  background: var(--header-acent-gren);
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type='file']::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: var(--primary-green);
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+input[type='file']::file-selector-button:hover {
+  background: var(--secondary-green);
+}
+
+/* template */
+
+.template {
+  text-decoration: underline;
+  scale: 1;
+  transition: all 250ms ease;
+  max-width: 200px;
+}
+
+.template:hover {
+  color: var(--secondary-green);
+  scale: 1.1;
+}
+
+/* mother-board */
+
+.expenses {
+  margin: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+
+.mother-board {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.role-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* pollution form */
+
+.pollution-form {
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  margin: 0 auto;
+  gap: 20px;
+  box-sizing: content-box;
+}
+
+.pollution-form-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.pollution-form-field {
+  width: 350px;
+  max-width: 100%;
+  color: #fff;
+  padding: 10px 12px;
+  background: var(--header-acent-gren);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 250ms ease;
+}
+.pollution-form-field:hover,
+.pollution-form-field:focus {
+  border: 2px solid black;
+}
+.pollution-form-fields-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pollution-form-button {
+  padding: 15px 17px;
+  background: var(--header-acent-gren);
+  border-radius: 10px;
+  border: none;
+  transition: all 250ms ease;
+  cursor: pointer;
+  color: #fff;
+}
+
+.pollution-form-button:hover,
+.pollution-form-button:focus {
+  background-color: var(--secondary-green);
+}
+
+/* exel input settings */
+
+/* .exel {
+  display: flex;
+  flex-direction: column;
+} */
+
+.exel-flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.exel-input {
+  /* margin-left: 20px; */
+}
+
+/* table */
+
+.table-container {
+  max-height: 400px; /* або будь-яка інша висота, яка вам потрібна */
+  overflow-y: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+.not-td-style {
+  border: none;
+}
+th {
+  background-color: var(--primary-green);
+}
+tr {
+}
+.delete-button {
+  background-color: var(--header-acent-gren);
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+  background-color: var(--button-hover);
+  cursor: pointer;
+}
+
+/* scroll bar styles */
+
+/* Works on Firefox */
+.table-container * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-green) var(--secondary-green);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--secondary-green);
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-green);
+  border-radius: 20px;
+  border: 1px solid var(--secondary-green);
+}
+
+/* hide and title settings */
+
+.hide-elem {
+  display: none;
+}
+
+#danger-level-select[title]:hover:before {
+  top: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0.5em;
+}
+#danger-level-select[title]:hover:after {
+  top: 50%;
+  left: 100%;
+  margin-left: 0;
+  margin-top: -0.125em;
+  border: 0.25em dashed transparent;
+  border-right: 0.25em solid #222;
+}
+
+img {
+  width: 1000px;
+  display: block;
+  margin: 20 auto;
+}
